@@ -1,0 +1,13 @@
+<!-- index.html -->
+ {% extends 'base.html' %}
+ {% block title %} 汉中卓越科技 VEX-IQ 8009 {% endblock %}
+ {% block headmessage %}
+    <h2 style="font-family: 微软雅黑;">LIST</h2>
+ {% endblock %}
+ {% block content %}
+    {% for post in posts %}
+        <p style="font-family: 微软雅黑;font-size: 14pt;font-weight: bold;">
+            <a href="/post/{{post.slug}}">{{post.title}}</a>
+        </p>
+    {% endfor %}
+ {% endblock %}
